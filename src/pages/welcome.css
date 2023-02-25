@@ -1,0 +1,58 @@
+.wel{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-green);
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.wel-btns{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wel-btns > div{
+    width: 60%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wel-btns > div > img{
+    width: 150px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+.wel-btns > div > p{
+    text-align: center;
+}
+
+.wel-btns > div > a{
+    color: white;
+    margin-top: 3px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .swiper{
+        display: none;
+    }
+
+    .wel{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wel-btns > div{
+        width: 80%;
+    }
+}
