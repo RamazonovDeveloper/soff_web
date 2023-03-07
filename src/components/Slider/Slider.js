@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import "./slider.css";
 
 // import required modules
-import { Pagination } from "swiper";
+import { Pagination, Autoplay } from "swiper";
 
 // images
 import star from "../../assets/Star.png"
@@ -18,9 +18,19 @@ import books from "../../assets/books.png"
 import inter from "../../assets/inter.png"
 import message from "../../assets/message.png"
 import phone from "../../assets/phone.png"
-
+// import QuestionsRepository from 'src/repositories/QuestionsRepository'
 
 function Slider() {
+  // const [qez, setQez] = useState([])
+
+  // function getQuestions() {
+  //   let question  = QuestionsRepository.getQuestions()
+  //   if(question){
+  //     setQez(question.data)
+  //   }
+  // }
+
+
   return (
     <>
       <Swiper
@@ -28,7 +38,11 @@ function Slider() {
         pagination={{
           clickable: true,
         }}
-        modules={[Pagination]}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        modules={[Autoplay ,Pagination]}
         className="mySwiper"
       >
         <SwiperSlide>

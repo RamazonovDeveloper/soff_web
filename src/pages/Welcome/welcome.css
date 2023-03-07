@@ -40,8 +40,8 @@
 }
 
 @media screen and (max-width: 800px) {
-    .swiper{
-        display: none;
+    .wel > .my-slider{
+        display: none!important;
     }
 
     .wel{

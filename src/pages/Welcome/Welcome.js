@@ -1,9 +1,9 @@
 import React from 'react'
-import Slider from '../components/Slider/Slider'
+import Slider from '../../components/Slider/Slider'
 
 import './welcome.css'
 
-import user from '../assets/registerUser.png'
+import user from '../../assets/registerUser.png'
 import { useNavigate } from 'react-router-dom'
 
 function Welcome() {
