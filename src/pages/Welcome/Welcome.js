@@ -12,7 +12,9 @@ function Welcome() {
 
   return (
     <div className='wel'>
-      <Slider className="my-slider"/> 
+      <div className='slider_box'> 
+        <Slider/>
+      </div>
       <div className='wel-btns'>
         <div>
           <h2>XUSH KELIBSIZ</h2>

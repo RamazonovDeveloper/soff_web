@@ -1,4 +1,5 @@
 import React, { createContext, useState }  from 'react'
+import { json } from 'react-router-dom';
 
 
 export const UserContext = createContext();
@@ -6,7 +7,9 @@ export const UserContext = createContext();
 
 function MainContext({children}) {
 
-const [user, setUser] = useState({});
+  let userDataFromLocalstorage = localStorage.getItem('user')
+  userDataFromLocalstorage = JSON.parse(userDataFromLocalstorage)
+  const [user, setUser] = useState(userDataFromLocalstorage);
 
 const data = {
   user: user,

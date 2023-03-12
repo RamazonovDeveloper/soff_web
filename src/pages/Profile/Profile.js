@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import './profile.css'
 
@@ -6,8 +6,13 @@ import backIcon from '../../assets/Back.svg'
 import userDefAvatar from '../../assets/userDefAvatar.svg'
 import profileCall from '../../assets/profileCall.svg'
 import { useNavigate } from 'react-router-dom'
+import { UserContext } from '../../context'
 
 function Profile() {
+
+  const user = useContext(UserContext)
+
+  console.log(user.user);
 
   const navigate = useNavigate()
 
@@ -25,14 +30,14 @@ function Profile() {
           <label htmlFor='name'>Ismi:</label>
           <div className='profile_form_items_input'>
             <img src={userDefAvatar}/>
-            <input name='name' placeholder='Daniel Travis'/>
+            <input name='name' defaultValue={user.user.full_name}/>
           </div>
         </div>
         <div className='profile_form_items'>
           <label htmlFor='name'>Nomeri:</label>
           <div className='profile_form_items_input'>
             <img src={profileCall}/>
-            <input name='name' placeholder='0812 345 6789'/>
+            <input name='name' defaultValue={user.user.phone}/>
           </div>
         </div>
         <div className='profile_form_items'>

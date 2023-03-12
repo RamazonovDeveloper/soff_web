@@ -11,8 +11,12 @@ import mainTest from '../../assets/mainTest.svg'
 import mainResult from '../../assets/mainResult.svg'
 
 import { Pagination } from "swiper";
+import { useNavigate } from 'react-router-dom';
 
 function MainCar() {
+
+  const navigate = useNavigate()
+
   return (
     <div className='mainCarousel'>
       <Swiper
@@ -24,7 +28,7 @@ function MainCar() {
         modules={[Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide>
+        <SwiperSlide onClick={() => navigate('/books')}>
           <div className='swiperBlock'>
             <img src={mainBook}/>
           </div>

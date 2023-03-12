@@ -7,7 +7,6 @@ import close from '../assets/close.png'
 import regCall from '../assets/regCall.png'
 import regPass from '../assets/regPass.png'
 
-import { LogInUser } from '../components/ApiData'
 import AuthRepository from '../repositories/AuthRepository'
 import { UserContext } from '../context'
 
@@ -38,13 +37,18 @@ function Login() {
         phone: telRef.current.value,
         password: passRef.current.value
       }
+
+      console.log(user)
       
-      const answer =await AuthRepository.loginUser(user)
+      const answer = await AuthRepository.loginUser(user)
       
       console.log(answer);
 
       if(answer.success){
         userData.key(answer.data)
+
+        localStorage.setItem('user', JSON.stringify(answer.data))
+
         console.log("login js is successfull")
         navigate('/welcome')
         // 

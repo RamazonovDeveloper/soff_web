@@ -3,10 +3,14 @@ import Login from './pages/Login';
 import Main from './pages/Main/Main';
 import Registration from './pages/Registration/Registration';
 import Welcome from './pages/Welcome/Welcome';
+import Book from './pages/Book/Book';
 
 import './App.css';
 import Profile from './pages/Profile/Profile';
-
+import Competition from './pages/Competition/Competition';
+import Settings from './pages/settings/Settings';
+import TimerSuccessful from './pages/TimerSuccessful/TimerSuccessful';
+import PageNotFound from './pages/404/pageNotFound';
 // import { LogInUser, registrNewUser } from './components/ApiData'
 
 
@@ -43,8 +47,13 @@ function App() {
         <Route path='/' element={<Welcome/>}/>
         <Route path='/registration' element={<Registration/>}/>
         <Route path='/logIn' element={<Login/>}/>
+        <Route path='/404' element={<PageNotFound/>}/>
         <Route path='/welcome' element={<Main/>}/>
         <Route path='/profile' element={<Profile/>}/>
+        <Route path='/books' element={<Book/>}/>
+        <Route path='/competition' element={<Competition/>}/>
+        <Route path='/settings' element={<Settings/>}/>
+        <Route path='/successful' element={<TimerSuccessful/>} />
       </Routes>
     </div>
   );

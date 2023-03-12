@@ -1,0 +1,175 @@
+.compet{
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    /* position: relative; */
+    height: 100vh;
+    border-left: 1px solid rgba(0, 0, 0, 0.064);
+    border-right: 1px solid rgba(0, 0, 0, 0.064);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-green-light);
+}
+
+.compet_title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 140%;
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.compet_title > a{
+    position: absolute;
+    left: 15px;
+    /* top: 0; */
+}
+
+.compet_main{
+    position: relative;
+    background-color: white;
+    border-radius: 20px 20px 0 0;
+    padding: 0 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+}
+
+.compet_main_title{
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 140%;
+    text-align: center;
+    color: #15141F;
+}
+
+
+.compet_main_registred{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    color: #15141F;
+    text-align: center;
+}
+
+.compet_main_registred_top {
+    /* padding: 0 24px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.compet_main_registred_top > a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160%;
+    text-align: right;
+    color: var(--color-green-light);
+}
+
+
+
+
+.compet_main_registred_users{
+    display: flex;
+    justify-content: flex-start;
+    /* padding: 0 24px; */
+    gap: 20px;
+}
+
+.compet_main_registred_user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 135%;
+    text-align: center;
+    color: #15141F;
+}
+
+.compet_main_registred_user > p{
+    margin: 0;
+    margin-top: 4px;
+}
+
+.compet_main_registred_user_img{
+    padding: 15px;
+    border-radius: 50%;
+    background-color: #F5F7FE;
+}
+
+.compet_main_registred_user_img > img{
+    display: flex;
+}
+
+
+
+.my-btn{
+    margin-top: auto;
+    margin-bottom: 25px;
+}
+
+
+
+
+.compet_main_timer{
+    margin-top: 20px;
+    background-color: #F4FCF9;
+    border-radius: 16px;
+}
+
+.compet_main_timer > p{
+    margin: 0;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 160%;
+
+    text-align: center;
+
+    color: rgba(12, 32, 115, 0.5);
+}
+
+.compet_main_timer_btns{
+    display: flex;
+    padding: 10px 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.compet_main_timer_btns_btn_text{
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 66px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.01em;
+
+    transition: var(--transition);
+    color: #15141F;
+}
+
+.compet_main_timer_btns_btn{
+    cursor: pointer;
+    display: flex;
+    user-select: none;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.compet_main_timer_btns_btn:hover{
+    background-color: #42c99a8a;
+}

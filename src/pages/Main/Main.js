@@ -60,7 +60,7 @@ function Main() {
               <p>Do'kon</p>
             </li>
             <li 
-            onClick={() => {setActiveButton('profile')}} 
+            onClick={() => {setActiveButton('profile');navigate('/settings')}} 
             className={activeButton =='profile' ? 'nav-bottom-btns-btn nav-bottom-btns-btn-active' : 'nav-bottom-btns-btn'}>
               <img src={profile}/>
               <p>Profil</p>
