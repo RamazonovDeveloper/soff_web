@@ -41,7 +41,7 @@ function Competition() {
   return (
     <div className='compet'>
       <div className='compet_title'>
-        <a href='/welcome'><img src={BackWhite}/></a>
+        <a href='/'><img src={BackWhite}/></a>
         <h3>Musoboqa #A1</h3>
       </div>
       <div className='compet_main'>

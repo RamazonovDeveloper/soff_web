@@ -24,7 +24,10 @@
 }
 
 .books_data_item{
+    text-decoration: none;
+    color: black;
     display: flex;
+    cursor: pointer;
     justify-content: space-between;
     padding: 0 10px;
     box-sizing: border-box;

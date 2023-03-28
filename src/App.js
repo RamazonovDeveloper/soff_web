@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Outlet, Route, Routes, useLocation, useRoutes } from 'react-router-dom';
 import Login from './pages/Login';
 import Main from './pages/Main/Main';
 import Registration from './pages/Registration/Registration';
@@ -11,6 +11,7 @@ import Competition from './pages/Competition/Competition';
 import Settings from './pages/settings/Settings';
 import TimerSuccessful from './pages/TimerSuccessful/TimerSuccessful';
 import PageNotFound from './pages/404/pageNotFound';
+import Navbar from './components/navbar/Navbar';
 // import { LogInUser, registrNewUser } from './components/ApiData'
 
 
@@ -41,22 +42,94 @@ import PageNotFound from './pages/404/pageNotFound';
 
 function App() {
 
-  return (
-    <div className="App">
-      <Routes>
-        <Route path='/' element={<Welcome/>}/>
-        <Route path='/registration' element={<Registration/>}/>
-        <Route path='/logIn' element={<Login/>}/>
-        <Route path='/404' element={<PageNotFound/>}/>
-        <Route path='/welcome' element={<Main/>}/>
-        <Route path='/profile' element={<Profile/>}/>
-        <Route path='/books' element={<Book/>}/>
-        <Route path='/competition' element={<Competition/>}/>
-        <Route path='/settings' element={<Settings/>}/>
-        <Route path='/successful' element={<TimerSuccessful/>} />
-      </Routes>
-    </div>
-  );
+  function RequireAuth({children}){
+    const auth = JSON.parse(localStorage.getItem('user'))
+    const location = useLocation()
+
+    return auth ? (
+      children
+    ):(
+      <Navigate to={'/login'} replace state={{path:location.pathname}}/>
+    )
+  }
+
+
+  const routes = useRoutes([
+    {
+      path:'/login',
+      element:<Login></Login>
+    },
+    {
+      path:'/welcome',
+      element:<Welcome></Welcome>
+    },
+    {
+      path:'/registration',
+      element:<Registration></Registration>
+    },
+    {
+      path:'/',
+      element:<Navbar></Navbar>,
+      children:[
+        {
+          index:true,
+          element:<RequireAuth><Main/></RequireAuth>
+        },
+        {
+          path:'/exams',
+          element:<><h1>This is exams Page</h1></>
+        },
+        {
+          path:'/store',
+          element:<><h1>This is store Page</h1></>
+        },
+        {
+          path:'/settings',
+          element:<><h1>This is settings Page</h1></>
+        }
+      ]
+    },
+    {
+      path:'/profile',
+      element:<Profile></Profile>
+    },
+    {
+      path:'/books',
+      element:<Book></Book>
+    },
+    {
+      path:'/test',
+      element:<><h1>This is a Test Page</h1></>
+    },
+    {
+      path:'/result',
+      element:<><h1>This is a Result Page</h1></>
+    },
+    {
+      path:'/competition',
+      element:<Competition></Competition>
+    }
+
+  ])
+
+  return routes
+
+  // return (
+  //   <div className="App">
+  //     <Routes>
+  //       <Route path='/' element={<Welcome/>}/>
+  //       <Route path='/registration' element={<Registration/>}/>
+  //       <Route path='/logIn' element={<Login/>}/>
+  //       <Route path='/404' element={<PageNotFound/>}/>
+  //       <Route path='/welcome' element={<Main/>}/>
+  //       <Route path='/profile' element={<Profile/>}/>
+  //       <Route path='/books' element={<Book/>}/>
+  //       <Route path='/competition' element={<Competition/>}/>
+  //       <Route path='/settings' element={<Settings/>}/>
+  //       <Route path='/successful' element={<TimerSuccessful/>} />
+  //     </Routes>
+  //   </div>
+  // );
 }
 
 export default App;

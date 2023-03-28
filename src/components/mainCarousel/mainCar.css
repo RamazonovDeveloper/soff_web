@@ -60,3 +60,15 @@
     width: 100%;
   } 
    */
+
+   @media screen and (max-width:600px) {
+    .mainCarousel .swiper{
+      width: 80%;
+      height: 185px!important;
+    }
+
+    .mainCarousel > .swiper > .swiper-wrapper > .swiper-slide{
+      height: 100%;
+      font-size: 14px;
+    }
+   }

@@ -6,7 +6,8 @@ import BookRepository from '../../repositories/BookRepository';
 import './book.css'
 
 import arrowRight from '../../assets/Arrow - Right.svg'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import BookCategory from './BookCategory';
 
 function Book() {
 
@@ -26,21 +27,25 @@ function Book() {
     getData()
   }, []);
 
+  const navigateToBookCategory = (data) => {
+    console.log("Clicked book");
+    <BookCategory data={data}/>
+  }
+
   return (
     <div className='books container'>
       <div className='books_top'>
-        <img onClick={() => navigate('/welcome')} src={back}/>
+        <img onClick={() => navigate('/')} src={back}/>
         <p>Kitoblar</p>
       </div>
       <div className='books_data'>
 
         {
           bookData.map((item, index) => {
-            
-            return<div key={index} className='books_data_item'>
+            return<Link key={index} onClick={() => navigateToBookCategory(item)} className='books_data_item'>
               <p>{item.title}</p>
               <img src={arrowRight}/>
-            </div>
+            </Link>
           })
         }
         

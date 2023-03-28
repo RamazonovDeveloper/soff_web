@@ -62,7 +62,7 @@ function Registration() {
       <div>
         <div className='register_title'>
           <h3>Ro’yxatdan o’tish</h3>
-          <img onClick={() => navigate('/')} src={close}/>
+          <img onClick={() => navigate('/welcome')} src={close}/>
         </div>
         <form className='register_form'>
           <div className='register_form_item'>

@@ -24,7 +24,7 @@ function Main() {
   const [activeButton, setActiveButton] = useState('home')
 
   return (
-    <div className='main container'>
+    <div className='main'>
       <div className='nav-top'>
         <div className='nav-top-texts'>
           <p>Salom!</p>
@@ -39,7 +39,7 @@ function Main() {
       
       <CompetitionList/>
 
-      <div className='nav-bottom'>
+      {/* <div className='nav-bottom'>
           <ul className='nav-bottom-btns'>
             <li 
             onClick={() => {setActiveButton('home')}} 
@@ -66,7 +66,7 @@ function Main() {
               <p>Profil</p>
             </li>
           </ul>
-        </div>
+        </div> */}
     </div>
   )
 }

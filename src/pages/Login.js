@@ -50,8 +50,7 @@ function Login() {
         localStorage.setItem('user', JSON.stringify(answer.data))
 
         console.log("login js is successfull")
-        navigate('/welcome')
-        // 
+        navigate('/')
       }else{
         setInvalid('invalidUser')
       }
@@ -68,7 +67,7 @@ function Login() {
       <div>
         <div className='register_title'>
           <h3>Tizimga kirish</h3>
-          <img onClick={() => navigate('/')} src={close}/>
+          <img onClick={() => navigate('/welcome')} src={close}/>
         </div>
         <form className='register_form'>
           <div className='register_form_item'>

@@ -12,14 +12,12 @@ function Profile() {
 
   const user = useContext(UserContext)
 
-  console.log(user.user);
-
   const navigate = useNavigate()
 
   return (
     <div className='profile container'>
       <div className='profile_top'>
-        <img onClick={() => navigate('/welcome')} src={backIcon}/>
+        <img onClick={() => navigate('/')} src={backIcon}/>
         <p>Profil</p>
       </div>
       <div className='profile_img'>
