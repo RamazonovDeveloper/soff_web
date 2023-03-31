@@ -6,21 +6,24 @@
     padding-bottom: 30px!important;
 }
 
-.mainCarousel > .swiper > .swiper-slide p{
+.swiperText{
   margin: 0;
+  margin-top: 5px;
+  overflow-y: auto;
 }
 
 .swiperBlock{
-  width: 70px;
-  height: 70px;
+  width: 74px!important;
+  height: 74px!important;
+  /* padding: 40px; */
   border: 2px solid #EAF9F4;
   border-radius: 50%;
-  /* border-radius: 100px; */
   display: flex;
   align-items: center;
   justify-content: center;
   color: black;
 }
+
 /* 
 .mainCarousel > .swiper{
   height: 80px!important;

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 
-import avatar from '../../assets/avatar.png'
+import avatar from '../../assets/userDefAvatar.svg'
 import home from '../../assets/home.png'
 import exams from '../../assets/exams.png'
 import store from '../../assets/store.png'

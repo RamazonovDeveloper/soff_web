@@ -32,31 +32,31 @@ function MainCar() {
           <div className='swiperBlock'>
             <img src={mainBook}/>
           </div>
-          <p>Kitoblar</p>
+          <p className='swiperText'>Kitoblar</p>
         </SwiperSlide>
         <SwiperSlide onClick={() => navigate('/exam')}>
           <div className='swiperBlock'>
             <img src={mainTest}/>
           </div>
-          <p>Bilimingizni sinab ko’ring</p>
+          <p className='swiperText'>Bilimingizni sinab ko’ring</p>
         </SwiperSlide>
         <SwiperSlide>
           <div className='swiperBlock'>
             <img src={mainResult}/>
           </div>
-          <p>Mening natijalarim</p>
+          <p className='swiperText'>Mening natijalarim</p>
         </SwiperSlide>
         <SwiperSlide>
           <div className='swiperBlock'>
             <img src={mainBook}/>
           </div>
-          <p>Kitoblar</p>
+          <p className='swiperText'>Kitoblar</p>
         </SwiperSlide>
         <SwiperSlide>
           <div className='swiperBlock'>
             <img src={mainBook}/>
           </div>
-          <p>Kitoblar</p>
+          <p className='swiperText'>Kitoblar</p>
         </SwiperSlide>
       </Swiper>
     </div>
