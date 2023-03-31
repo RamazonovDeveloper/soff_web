@@ -62,9 +62,19 @@
    */
 
    @media screen and (max-width:600px) {
+
     .mainCarousel .swiper{
       width: 80%;
       height: 185px!important;
+      padding-bottom: 0!important;
+    }
+
+    .mainCarousel > .swiper > .swiper-wrapper{
+      height: 80%;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+      bottom: 20px;
     }
 
     .mainCarousel > .swiper > .swiper-wrapper > .swiper-slide{

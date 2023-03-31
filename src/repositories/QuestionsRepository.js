@@ -9,7 +9,7 @@ class Questions {
             return result.data
         }
         if(!result.success){
-            return error(result.data)
+            return console.error(result.data)
         }
     }
 }

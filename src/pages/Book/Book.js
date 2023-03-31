@@ -7,13 +7,14 @@ import './book.css'
 
 import arrowRight from '../../assets/Arrow - Right.svg'
 import { Link, useNavigate } from 'react-router-dom';
-import BookCategory from './BookCategory';
 
 function Book() {
 
   const navigate = useNavigate()
 
   let [bookData, setBookData] = useState([])
+
+  console.log(bookData)
   
   useEffect(() => {
     async function getData(){
@@ -27,10 +28,10 @@ function Book() {
     getData()
   }, []);
 
-  const navigateToBookCategory = (data) => {
-    console.log("Clicked book");
-    <BookCategory data={data}/>
-  }
+  // const navigateToBookCategory = (data) => {
+  //   console.log("Clicked book");
+  //   <BookCategory data={data}/>
+  // }
 
   return (
     <div className='books container'>
@@ -42,7 +43,12 @@ function Book() {
 
         {
           bookData.map((item, index) => {
-            return<Link key={index} onClick={() => navigateToBookCategory(item)} className='books_data_item'>
+            return<Link
+            to={'/booksCategory'} 
+            key={index} 
+            state={{categoryName:item.title,bookData:item.children}}
+            onClick={() => console.log(item)} 
+            className='books_data_item'>
               <p>{item.title}</p>
               <img src={arrowRight}/>
             </Link>

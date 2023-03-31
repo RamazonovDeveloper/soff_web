@@ -12,6 +12,11 @@ import Settings from './pages/settings/Settings';
 import TimerSuccessful from './pages/TimerSuccessful/TimerSuccessful';
 import PageNotFound from './pages/404/pageNotFound';
 import Navbar from './components/navbar/Navbar';
+import BookCategory from './pages/Book/BookCategory';
+import Exams from './pages/Exams/Exams';
+import ExamsCategory from './pages/Exams/ExamsCategory';
+import ExamCategoryItem from './pages/Exams/ExamCategoryItem';
+import ExamQuestions from './pages/Exams/ExamQuestions';
 // import { LogInUser, registrNewUser } from './components/ApiData'
 
 
@@ -93,9 +98,41 @@ function App() {
       path:'/profile',
       element:<Profile></Profile>
     },
-    {
+    { 
       path:'/books',
       element:<Book></Book>
+    },
+    {
+      path:'/booksCategory',
+      element:<BookCategory></BookCategory>
+    },
+    {
+      path:'/exam',
+      element:<><Outlet></Outlet></>,
+      children:[
+        {
+          index:true,
+          element:<Exams></Exams>
+        },
+        {
+          path:'/exam/category',
+          element:<ExamsCategory></ExamsCategory>,
+          children:[
+            {
+              index:true,
+              element:<ExamsCategory></ExamsCategory>,
+            },
+            {  
+              path:'/exam/category/item',
+              element:<ExamCategoryItem></ExamCategoryItem>
+            }
+          ]
+        }
+      ]
+    },
+    {
+      path:'/questions',
+      element:<ExamQuestions></ExamQuestions>
     },
     {
       path:'/test',

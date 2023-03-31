@@ -47,6 +47,11 @@
     display: flex;
     border-bottom: 1px solid #F9F9FA;;
     justify-content: space-between;
+    margin-left: 10px;
+}
+
+.main_compet_item_name{
+    /* margin-right: 10px; */
 }
 
 .main_compet_item_price{

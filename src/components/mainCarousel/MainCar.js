@@ -34,7 +34,7 @@ function MainCar() {
           </div>
           <p>Kitoblar</p>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide onClick={() => navigate('/exam')}>
           <div className='swiperBlock'>
             <img src={mainTest}/>
           </div>
