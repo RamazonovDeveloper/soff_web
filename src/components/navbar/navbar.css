@@ -70,4 +70,12 @@
     .nav{
         height: 90vh;
     }
+
+    .nav-bottom-btns > a:nth-child(2){
+        margin-right: 30px;
+    }
+    
+    .nav-bottom-btns > a:nth-child(3){
+        margin-left: 30px;
+    }
 }
