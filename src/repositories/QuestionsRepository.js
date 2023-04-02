@@ -1,14 +1,16 @@
+import axios from "axios"
+
 const baseUrl = process.env.REACT_APP_BASEURL
 
 class Questions {
     getQuestions = async () => {
-        let endPoint = '/offline-test/v1/category/'
-        let result = await fetch(`${baseUrl}/${endPoint}`)
+        let endPoint = 'exam/v1/question/'
+        let result = await axios.get(`${baseUrl}${endPoint}`)
         console.log(result)
-        if(result.success){
+        if(result.status == 200){
             return result.data
         }
-        if(!result.success){
+        if(!result.success == 200){
             return console.error(result.data)
         }
     }

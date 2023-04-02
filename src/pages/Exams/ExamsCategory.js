@@ -44,7 +44,6 @@ function ExamsCategory() {
             >
               <p>{item.title}</p>
               <img src={arrowRight}/>
-              <p>To exam category item</p>
             </Link>
           })
         }

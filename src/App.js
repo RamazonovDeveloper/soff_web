@@ -116,7 +116,7 @@ function App() {
         },
         {
           path:'/exam/category',
-          element:<ExamsCategory></ExamsCategory>,
+          element:<><Outlet></Outlet></>,
           children:[
             {
               index:true,
@@ -124,7 +124,13 @@ function App() {
             },
             {  
               path:'/exam/category/item',
-              element:<ExamCategoryItem></ExamCategoryItem>
+              element:<><Outlet></Outlet></>,
+              children:[
+                {
+                  index:true,
+                  element:<ExamCategoryItem></ExamCategoryItem>
+                }
+              ]
             }
           ]
         }
