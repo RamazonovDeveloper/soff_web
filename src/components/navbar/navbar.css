@@ -68,7 +68,7 @@
 
 @media screen and (max-width:600px) {  
     .nav{
-        height: 90vh;
+        height: 93vh;
     }
 
     .nav-bottom-btns > a:nth-child(2){
