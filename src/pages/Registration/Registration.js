@@ -9,6 +9,9 @@ import regEdit from '../../assets/regEdit.png'
 import { useNavigate } from 'react-router-dom'
 import { registrNewUser } from '../../components/ApiData'
 
+import {AiOutlineEye, AiOutlineEyeInvisible} from 'react-icons/ai'
+
+
 function Registration() {
 
   const navigate = useNavigate()
@@ -18,6 +21,12 @@ function Registration() {
   const nameRef = useRef()
   const telRef = useRef()
   const passRef = useRef()
+
+  const [passVisible, setPassVisible] = useState(false)
+
+  const passVisibleFunc = () => {
+    setPassVisible(!passVisible)
+  }
 
   const checkUser = async (e) => {
     e.preventDefault();
@@ -76,11 +85,16 @@ function Registration() {
           </div>
           <div className='register_form_item'>
             <label htmlFor='username'><img src={regPass}/></label>
-            <input name='username' type="password" placeholder="Parol"/>
+            <input name='username' type={passVisible ? "text" : "password"} placeholder="Parol"/>
+            {
+              passVisible 
+              ? <AiOutlineEyeInvisible className='eye' onClick={passVisibleFunc}/>
+              : <AiOutlineEye className='eye' onClick={passVisibleFunc}/>
+            }
           </div>
           <div className='register_form_item'>
             <label htmlFor='username'><img src={regPass}/></label>
-            <input ref={passRef} name='username' type="password" placeholder="Parolni tasdiqlang"/>
+            <input ref={passRef} name='username' type={passVisible ? "text" : "password"} placeholder="Parolni tasdiqlang"/>
           </div>
         </form>
         

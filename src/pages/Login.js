@@ -7,6 +7,8 @@ import close from '../assets/close.png'
 import regCall from '../assets/regCall.png'
 import regPass from '../assets/regPass.png'
 
+import {AiOutlineEye, AiOutlineEyeInvisible} from 'react-icons/ai'
+
 import AuthRepository from '../repositories/AuthRepository'
 import { UserContext } from '../context'
 
@@ -20,7 +22,13 @@ function Login() {
   const passRef = useRef()
 
   const [invalid, setInvalid] = useState('')
-  
+
+  const [passVisible, setPassVisible] = useState(false)
+
+  const passVisibleFunc = () => {
+    setPassVisible(!passVisible)
+  }
+
   const checkUser = async () =>{
     
     setInvalid('')
@@ -76,7 +84,12 @@ function Login() {
           </div>
           <div className='register_form_item'>
             <label htmlFor='username'><img src={regPass}/></label>
-            <input ref={passRef} name='username' type="password" placeholder="Parol"/>
+            <input ref={passRef} name='username' type={passVisible ? "text" : "password"} placeholder="Parol"/>
+            {
+              passVisible 
+              ? <AiOutlineEyeInvisible className='eye' onClick={passVisibleFunc}/>
+              : <AiOutlineEye className='eye' onClick={passVisibleFunc}/>
+            }
           </div>
           
         </form>
