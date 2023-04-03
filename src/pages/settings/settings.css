@@ -1,10 +1,8 @@
 .settings{
     position: relative;
-    height: 100vh;
-    border-left: 1px solid rgba(0, 0, 0, 0.064);
-    border-right: 1px solid rgba(0, 0, 0, 0.064);
     display: flex;
     flex-direction: column;
+    height: 80vh;
 }
 
 .settings_title{
@@ -47,12 +45,17 @@
 }
 
 .settings_bottom{
-    margin-top: auto;
-    margin-bottom: 5px;
+    /* margin-top: auto;
+    margin-bottom: 5px; */
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* margin: 0; */
 
+}
+
+.settings_bottom > p{
+    margin: 0;
 }
 
 .settings_bottom > button{

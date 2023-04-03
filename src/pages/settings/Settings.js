@@ -22,7 +22,7 @@ function Settings() {
     }
 
   return (
-    <div className='settings container'>
+    <div className='settings'>
       <a className='settings_back' href='/welcome'><img src={backIcon}/></a>
       <h2 className='settings_title'>Sozlamalar</h2>
       <div className='settings_items'>
@@ -39,14 +39,14 @@ function Settings() {
             <p>Maxfiy sozlamalar</p>
             <img src={arrowRight}/>    
         </div>  
-        <div className='settings_items_item'>
+        {/* <div className='settings_items_item'>
             <p>Yordamchi markaz</p>
             <img src={arrowRight}/>    
         </div>  
         <div className='settings_items_item'>
             <p>Biz bilan bog’lanish</p>
             <img src={arrowRight}/>    
-        </div> 
+        </div>  */}
       </div>
         <p className='settings_items_title'>Follow Us</p> 
         <div className='settings_socials'>
@@ -65,7 +65,7 @@ function Settings() {
         </div>
         <div className='settings_bottom'>
             <button onClick={() => logOutUser()} className='settings_logOut'>Log out</button>
-            <p className='settings_soff'>Soff Hub / 2022</p>
+            <p className='settings_soff'>Soff Hub / 2023</p>
         </div>
     </div>
   )

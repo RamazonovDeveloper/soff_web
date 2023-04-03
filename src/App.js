@@ -90,7 +90,7 @@ function App() {
         },
         {
           path:'/settings',
-          element:<><h1>This is settings Page</h1></>
+          element:<Settings></Settings>
         }
       ]
     },
