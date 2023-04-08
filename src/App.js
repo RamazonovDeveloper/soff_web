@@ -17,6 +17,8 @@ import Exams from './pages/Exams/Exams';
 import ExamsCategory from './pages/Exams/ExamsCategory';
 import ExamCategoryItem from './pages/Exams/ExamCategoryItem';
 import ExamQuestions from './pages/Exams/ExamQuestions';
+import ExamResults from './pages/ExamResults/ExamResults';
+import LastResults from './pages/ExamResults/LastResults';
 // import { LogInUser, registrNewUser } from './components/ApiData'
 
 
@@ -82,7 +84,7 @@ function App() {
         },
         {
           path:'/exams',
-          element:<><h1>This is exams Page</h1></>
+          element:<Exams></Exams>
         },
         {
           path:'/store',
@@ -138,7 +140,27 @@ function App() {
     },
     {
       path:'/questions',
-      element:<ExamQuestions></ExamQuestions>
+      element:<><Outlet></Outlet></>,
+      children:[
+        {
+          index:true,
+          element:<ExamQuestions></ExamQuestions>
+        },
+        {
+          path:'/questions/results',
+          element:<><Outlet></Outlet></>,
+          children:[
+            {
+              index:true,
+              element:<ExamResults></ExamResults>
+            },
+            {
+              path:'/questions/results/view',
+              element:<LastResults></LastResults>
+            }
+          ]
+        }
+      ]
     },
     {
       path:'/test',

@@ -38,13 +38,13 @@ function Profile() {
             <input name='name' defaultValue={user.user.phone}/>
           </div>
         </div>
-        <div className='profile_form_items'>
+        {/* <div className='profile_form_items'>
           <label htmlFor='name'>Parol:</label>
           <div className='profile_form_items_input'>
             <img src={userDefAvatar}/>
             <input name='name' placeholder='Daniel Travis'/>
           </div>
-        </div>
+        </div> */}
         
       </div>
       <div className='profile_btn'>

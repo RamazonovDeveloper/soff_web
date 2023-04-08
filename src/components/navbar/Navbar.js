@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 import './navbar.css'
 
-import home from '../../assets/home.png'
-import exams from '../../assets/exams.png'
-import store from '../../assets/store.png'
+import home from '../../assets/home.svg'
+import exams from '../../assets/exams.svg'
+import store from '../../assets/store.svg'
 import profile from '../../assets/userDefAvatar.svg'
 
 function Navbar() {
@@ -29,7 +29,7 @@ function Navbar() {
                 <img src={home}/>
                 <p>Asosiy</p>
             </ActiveLink>
-            <ActiveLink className="nav-bottom-btns-btn" to={'/exams'}>
+            <ActiveLink className="nav-bottom-btns-btn" to={'/exam'}>
                 <img src={exams}/>
                 <p>Imtihonlar</p>
             </ActiveLink>

@@ -23,7 +23,7 @@ function Settings() {
 
   return (
     <div className='settings'>
-      <a className='settings_back' href='/welcome'><img src={backIcon}/></a>
+      <a className='settings_back' href='/'><img src={backIcon}/></a>
       <h2 className='settings_title'>Sozlamalar</h2>
       <div className='settings_items'>
         <p className='settings_items_title'>Umumiy</p>

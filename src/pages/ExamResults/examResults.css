@@ -1,0 +1,82 @@
+.exam_results{
+    height: 100vh;
+    border-left: 1px solid rgba(0, 0, 0, 0.064);
+    border-right: 1px solid rgba(0, 0, 0, 0.064);
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.exam_results_wrapper{
+    background: #F5F7FE;
+    padding: 0 20px;
+    /* position: absolute; */
+    padding-bottom: 20px;
+    border-radius: 0 0 20px 20px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.exam_results_btns{
+    display: flex;
+    gap: 10px;
+    padding: 0 20px;
+    /* padding-top: 30px; */
+    margin-top: auto;
+    margin-bottom: 30px;
+}
+
+.exam_results_title{
+    text-align: center;
+}
+
+.exam_results_texts{
+    padding: 24px;
+    background-color: white;
+    border-radius: 0 0 20px 20px;
+    margin-top: 100px;
+    height: 85%;
+    position: relative;
+}
+
+.exam_results_texts_icon{
+    position: absolute;
+    top: -60px;
+    left: calc(50% - 80px);
+}
+
+.exam_results_texts > h2{
+    text-align: center;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.exam_results_texts_item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgb(204, 202, 202);
+}
+
+.exam_results_texts_item:last-child{
+    border-bottom: 1px solid rgb(204, 202, 202);
+}
+
+.exam_results > a{
+    margin-top: 30px;
+}
+
+.exam_results > button{
+    margin-top: auto;
+    margin-bottom: 30px;
+}
+
+
+
+.modal{
+    
+}
