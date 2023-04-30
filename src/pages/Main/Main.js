@@ -11,6 +11,8 @@ import MainCar from '../../components/mainCarousel/MainCar'
 import CompetitionList from '../../components/competList/CompetitionList'
 import { useNavigate } from 'react-router-dom'
 import { UserContext } from '../../context'
+import ChangePass from '../settings/changePassword/ChangePass'
+import AuthRepository from '../../repositories/AuthRepository'
 
 
 function Main() {
@@ -20,6 +22,7 @@ function Main() {
   console.log(user)
 
   const navigate = useNavigate()
+
 
   const [activeButton, setActiveButton] = useState('home')
 

@@ -1,73 +1,94 @@
-import axios from "axios"
-import { useState } from "react"
+import axios from "axios";
+import { useState } from "react";
 
-const baseUrl = process.env.REACT_APP_BASEURL
+const baseUrl = process.env.REACT_APP_BASEURL;
 
-class AuthUser{
+class AuthUser {
+  // getCompetitionData = async () => {
 
-    // getCompetitionData = async () => {
+  //     // https://xusandev.pythonanywhere.com/competition/v1/list/
+  //     const endPoint = 'competition/v1/list/'
 
-    //     // https://xusandev.pythonanywhere.com/competition/v1/list/
-    //     const endPoint = 'competition/v1/list/'
+  //     let response = await axios.get(`${baseUrl}${endPoint}`)
 
-    //     let response = await axios.get(`${baseUrl}${endPoint}`)
+  //     return response
+  // }
 
-    //     return response
-    // }
+  registUser = async (data) => {
+    const endPoint = "/account/v1/sign-up/";
 
-    registUser = async (data) => {
+    let response = await fetch(`${baseUrl}${endPoint}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+      body: JSON.stringify(data),
+    });
 
-        const endPoint = '/account/v1/sign-up/'
-        
-        let response = await fetch(`${baseUrl}${endPoint}`,{
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json;charset=utf-8'
-            },
-            body: JSON.stringify(data)
-        })
-        
-        let result = await response.json();
+    let result = await response.json();
 
-        console.log("Registration");
+    console.log("Registration");
 
-        console.log(result);
+    console.log(result);
 
-        return result
+    return result;
+  };
 
-    }
+  loginUser = async (user) => {
+    const endPoint = "/account/v1/sign-in/";
 
-    loginUser = async (user) => {
+    // const [login, setLogin] = useState('')
 
-        const endPoint = '/account/v1/sign-in/'
+    // axios.post(`${baseUrl}${endPoint}`,user)
+    //     .then((e) => {setLogin(e)})
 
-        // const [login, setLogin] = useState('')
+    // return login
 
-        // axios.post(`${baseUrl}${endPoint}`,user)
-        //     .then((e) => {setLogin(e)})
+    console.log(`${baseUrl}${endPoint}`);
 
-        
-        // return login
+    let response = await fetch(`${baseUrl}${endPoint}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+      body: JSON.stringify(user),
+    });
+
+    let result = await response.json();
+
+    console.log("Login");
+    console.log(result);
+
+    return await result;
+  };
 
 
+  // not done yet
+  
 
-        console.log(`${baseUrl}${endPoint}`)
+  changePassword = async () => {
+    const endPoint = "account/v1/change-password/";
 
-        let response = await fetch(`${baseUrl}${endPoint}`,{
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json;charset=utf-8'
-            },
-            body: JSON.stringify(user)
-        })
-    
-        let result = await response.json();
+    const telNum = "string";
 
-        console.log("Login");
-        console.log(result);
+    // let result = await axios.put(`${endPoint}/${telNum}`,{
+    //     "old_password": "string",
+    //     "password": "salom123",
+    //     "password2": "salom123"
+    // })
 
-        return await result
-    }
+    let result = await axios({
+      method: "patch",
+      url: `${baseUrl}${endPoint}${telNum}/`,
+      data: {
+        old_password: "salom12345",
+        password: "alik1234",
+        password2: "alik1234",
+      },
+    });
+
+    console.log(result());
+  };
 }
 
-export default new AuthUser
+export default new AuthUser();

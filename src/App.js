@@ -19,6 +19,7 @@ import ExamCategoryItem from './pages/Exams/ExamCategoryItem';
 import ExamQuestions from './pages/Exams/ExamQuestions';
 import ExamResults from './pages/ExamResults/ExamResults';
 import LastResults from './pages/ExamResults/LastResults';
+import ChangePass from './pages/settings/changePassword/ChangePass';
 // import { LogInUser, registrNewUser } from './components/ApiData'
 
 
@@ -92,7 +93,17 @@ function App() {
         },
         {
           path:'/settings',
-          element:<Settings></Settings>
+          element:<Settings></Settings>,
+          // children:[
+          //   // {
+          //   //   index:true,
+          //   //   element:<Settings></Settings>
+          //   // },
+          //   {
+          //     path:'/settings/change_password',
+          //     element:<ChangePass></ChangePass>
+          //   }
+          // ]
         }
       ]
     },
@@ -161,6 +172,10 @@ function App() {
           ]
         }
       ]
+    },
+    {
+      path:'/settings/change_password',
+      element:<ChangePass></ChangePass>
     },
     {
       path:'/test',

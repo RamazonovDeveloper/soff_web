@@ -10,7 +10,7 @@ import twitterIcon from '../../assets/twitter.svg'
 import facebookIcon from '../../assets/facebook.svg'
 import tikTokIcon from '../../assets/tikTok.svg'
 import insIcon from '../../assets/instagram.svg'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 function Settings() {
 
@@ -27,10 +27,10 @@ function Settings() {
       <h2 className='settings_title'>Sozlamalar</h2>
       <div className='settings_items'>
         <p className='settings_items_title'>Umumiy</p>
-        <div className='settings_items_item'>
+        <Link to={'/settings/change_password'} className='settings_items_item'>
             <p>Parolni o’zgartirish</p>
             <img src={arrowRight}/>    
-        </div>
+        </Link>
         <div className='settings_items_item'>
             <p>Bildirishnoma</p>
             <img src={arrowRight}/>    

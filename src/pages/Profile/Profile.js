@@ -45,7 +45,6 @@ function Profile() {
             <input name='name' placeholder='Daniel Travis'/>
           </div>
         </div> */}
-        
       </div>
       <div className='profile_btn'>
         <button className='main_btn '>Saqlash</button>
